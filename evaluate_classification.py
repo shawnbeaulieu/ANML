@@ -119,7 +119,7 @@ def main(args):
                         weights2reset = ["vars_26"] 
                         biases2reset = ["vars_27"]
                     else:
-                        weights2reset = ["vars_14"
+                        weights2reset = ["vars_14"]
                         biases2reset = ["vars_15"]
 
                     for n, a in maml.named_parameters():
@@ -277,7 +277,7 @@ def main(args):
                         weights2reset = ["vars_26"]
                         biases2reset = ["vars_27"]
                     else:
-                        weights2reset = ["vars_14"
+                        weights2reset = ["vars_14"]
                         biases2reset = ["vars_15"]
 
                     for n, a in maml.named_parameters():
@@ -363,7 +363,7 @@ def main(args):
             my_experiment.store_json()
             print("FINAL RESULTS = ", final_results_all)
 
-writer.close()
+    writer.close()
 
 
 if __name__ == '__main__':
@@ -385,6 +385,7 @@ if __name__ == '__main__':
     argparser.add_argument("--iid", action="store_true")
     argparser.add_argument("--rln", type=int, default=6)
     argparser.add_argument("--runs", type=int, default=50)
+    argparser.add_argument("--neuromodulation", action="store_true")
 
     args = argparser.parse_args()
 
