@@ -41,7 +41,6 @@ def freeze_layers(layers_to_freeze, maml):
 
 def log_accuracy(maml, my_experiment, iterator_test, device, writer, step):
     correct = 0
-    torch.save(maml.net, "../drive/My Drive/nm_conv_learner.model")
     for img, target in iterator_test:
         with torch.no_grad():
             img = img.to(device)
